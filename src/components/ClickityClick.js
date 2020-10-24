@@ -6,14 +6,15 @@ class ClickityClick extends React.Component {
 
     // Define the initial state:
     this.state = {
-      hasBeenClicked: false
+      hasBeenClicked: false,
+      count: 0
     };
   }
 
   handleClick = () => {
     // when handleClick is called, newCount is set to whatever this.state.count is plus 1 PRIOR to calling this.setState
     let newCount = this.state.count + 1
-    
+
     this.setState({
       hasBeenClicked: true
     }, () => console.log(this.state.hasBeenClicked)) // prints true
